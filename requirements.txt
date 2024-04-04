@@ -1,6 +1,6 @@
 asgiref==3.7.2
 build==0.10.0
-CacheControl==0.13.0
+CacheControl==0.12.9
 certifi==2023.11.17
 cffi==1.15.0
 charset-normalizer==3.3.2
