@@ -5,6 +5,7 @@ certifi==2023.11.17
 cffi==1.16.0
 charset-normalizer==3.3.2
 cleo==2.1.0
+click==8.1.7
 crashtest==0.4.1
 distlib==0.3.8
 dj-database-url==2.1.0
@@ -12,6 +13,8 @@ Django==5.0.2
 dulwich==0.21.7
 fastjsonschema==2.19.0
 filelock==3.13.1
+gunicorn==21.2.0
+h11==0.14.0
 idna==3.6
 iniconfig==2.0.0
 installer==0.7.0
@@ -42,5 +45,6 @@ tomlkit==0.12.3
 trove-classifiers==2023.11.29
 typing_extensions==4.10.0
 urllib3==2.1.0
+uvicorn==0.29.0
 virtualenv==20.25.0
 xattr==0.10.1
