@@ -9,7 +9,7 @@ click==8.1.7
 crashtest==0.4.1
 distlib==0.3.8
 dj-database-url==2.1.0
-Django==5.0.2
+Django==3.2.25
 dulwich==0.21.7
 fastjsonschema==2.19.0
 filelock==3.13.1
