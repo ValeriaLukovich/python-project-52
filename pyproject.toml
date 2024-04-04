@@ -6,7 +6,7 @@ authors = ["ValeriaLukovich"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "^3.11"
 dj-database-url = "^2.1.0"
 psycopg2-binary = "^2.9.9"
 python-dotenv = "^1.0.1"
