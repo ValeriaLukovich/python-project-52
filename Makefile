@@ -1,5 +1,5 @@
 install:
-	poetry install
+	pip install
 
 build:
 	./build.sh
