@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/~python-project-52/task/bin python
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
