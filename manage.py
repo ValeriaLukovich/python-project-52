@@ -4,12 +4,6 @@ import os
 import sys
 
 
-from dotenv import load_dotenv
-
-if __name__ == '__main__':
-    load_dotenv()
-    
-
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'task_manager.settings')
@@ -22,3 +16,7 @@ def main():
             "forget to activate a virtual environment?"
         ) from exc
     execute_from_command_line(sys.argv)
+
+
+if __name__ == '__main__':
+    main()
