@@ -1,4 +1,4 @@
-#!/task/bin python3
+#!/task/bin python3.12
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
