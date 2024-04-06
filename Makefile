@@ -5,7 +5,7 @@ build:
 	./build.sh
 
 start:
-	python3 -m gunicorn task_manager.asgi:application -k uvicorn.workers.UvicornWorker
+	poetry run python manage.py runserver 0.0.0.0:8000
 
 
 migrate:
