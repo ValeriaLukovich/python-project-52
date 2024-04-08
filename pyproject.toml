@@ -15,6 +15,9 @@ uvicorn = "^0.29.0"
 django = "^5.0.4"
 
 
+[tool.poetry.group.dev.dependencies]
+flake8 = "^7.0.0"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
