@@ -53,7 +53,7 @@ BOOTSTRAP4 = {
     'required_css_class': '',
     'error_css_class': 'is-invalid',
     'success_css_class': 'is-valid',
-    'formset_renderers':{
+    'formset_renderers': {
         'default': 'bootstrap4.renderers.FormsetRenderer',
     },
     'form_renderers': {
@@ -75,7 +75,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'RENDER' not in os.environ
 
-ALLOWED_HOSTS = ['webserver','127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['webserver', '127.0.0.1', 'localhost']
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
