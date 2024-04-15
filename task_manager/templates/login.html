@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% load django_bootstrap5 %}
+
+{% block content %}
+
+{% load i18n %}
+
+      <h1 class="my-4">
+        
+{% translate 'Entrance' %}
+
+      </h1>
+      
+<form method="post">
+  {% csrf_token %}
+  {% bootstrap_form form %}
+  <input type="submit" class="btn btn-primary" value="{% translate "LogIn" %}">
+</form>
+
+
+{% endblock %}
