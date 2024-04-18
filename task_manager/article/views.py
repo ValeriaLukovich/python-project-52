@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views import View
 from .models import Users
-from .forms import UserForm, UserLoginForm
+from .forms import UserForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
@@ -25,19 +25,19 @@ class UserFormCreateView(CreateView):
         form = UserForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('user_login')
+            return redirect('login')
         return render(request, 'users/create.html', {'form': form})
 
 
 class UserFormUpdateView(LoginRequiredMixin, UpdateView):
     def get(self, request, *args, **kwargs):
-        user_id = kwargs.get('id')
+        user_id = kwargs.get('pk')
         user = Users.objects.get(id=user_id)
         form = UserForm(instance=user)
         return render(request, 'users/update.html', {'form': form, 'user': user})
 
     def post(self, request, *args, **kwargs):
-        user_id = kwargs.get('id')
+        user_id = kwargs.get('pk')
         user = Users.objects.get(id=user_id)
         form = UserForm(request.POST, instance=user)
         if form.is_valid():
@@ -48,16 +48,14 @@ class UserFormUpdateView(LoginRequiredMixin, UpdateView):
 
 class UserFormDeleteView(LoginRequiredMixin, DeleteView):
     def get(self, request, *args, **kwargs):
-        user_id = kwargs.get('id')
+        user_id = kwargs.get('pk')
         user = Users.objects.get(id=user_id)
         form = UserForm(instance=user)
         return render(request, 'users/delete.html', {'form': form, 'user': user})
 
     def post(self, request, *args, **kwargs):
-        user_id = kwargs.get('id')
+        user_id = kwargs.get('pk')
         user = Users.objects.get(id=user_id)
         if user:
             user.delete()
         return redirect('users_list')
-
-
