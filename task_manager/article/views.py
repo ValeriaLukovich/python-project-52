@@ -2,8 +2,10 @@ from django.shortcuts import render, redirect
 from django.views import View
 from .models import Users
 from .forms import UserForm
+from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.contrib.messages.views import SuccessMessageMixin
 
 
 class IndexView(View):
@@ -15,7 +17,7 @@ class IndexView(View):
         })
 
 
-class UserFormCreateView(CreateView):
+class UserFormCreateView(SuccessMessageMixin, CreateView):
 
     def get(self, request, *args, **kwargs):
         form = UserForm()
@@ -25,11 +27,12 @@ class UserFormCreateView(CreateView):
         form = UserForm(request.POST)
         if form.is_valid():
             form.save()
+            success_message = _("The user has been successfully registered")
             return redirect('login')
         return render(request, 'users/create.html', {'form': form})
 
 
-class UserFormUpdateView(LoginRequiredMixin, UpdateView):
+class UserFormUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     def get(self, request, *args, **kwargs):
         user_id = kwargs.get('pk')
         user = Users.objects.get(id=user_id)

@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views.generic.base import TemplateView
 from task_manager.article.forms import UserLoginForm
 from django.utils.translation import gettext_lazy as _
+from django.urls import reverse_lazy
 from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.messages.views import SuccessMessageMixin
 
@@ -22,5 +23,4 @@ class UserLoginView(SuccessMessageMixin, LoginView):
 
 class UserLogoutView(SuccessMessageMixin, LogoutView):
 
-    def logout_view(self, request):
-        logout(request)
+    next_page = reverse_lazy('start_page')
