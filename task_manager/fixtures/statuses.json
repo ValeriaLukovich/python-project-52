@@ -1,0 +1,26 @@
+[
+    {
+        "model": "statuses.status",
+        "pk": 2,
+        "fields": {
+            "name": "max",
+            "timestamp": "2024-04-25T10:59:06.698Z"
+        }
+    },
+    {
+        "model": "statuses.status",
+        "pk": 3,
+        "fields": {
+            "name": "emmi",
+            "timestamp": "2024-04-25T11:32:15.479Z"
+        }
+    },
+    {
+        "model": "statuses.status",
+        "pk": 4,
+        "fields": {
+            "name": "mia1",
+            "timestamp": "2024-04-25T14:47:38.030Z"
+        }
+    }
+]

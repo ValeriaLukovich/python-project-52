@@ -49,7 +49,10 @@ INSTALLED_APPS = [
     'task_manager',
     'task_manager.article',
     'task_manager.statuses',
+    'task_manager.tasks',
+    'task_manager.labels',
     'django_bootstrap5',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -100,21 +103,12 @@ DATABASES = {
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
-#    {
-#        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-#    },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
         'OPTIONS': {
             'min_length': 3
         }
     },
-#    {
-#        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-#    },
-#    {
-#        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-#    },
 ]
 
 

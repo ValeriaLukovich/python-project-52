@@ -15,11 +15,14 @@
 
       </h1>
       
-<p>{% translate 'Are you sure, that you want delete {{ user.first_name }}{{ user.last_name }}?' %}</p>
-<form method="post">
-  <input type="hidden" name="csrfmiddlewaretoken" value="J2fmH7E9fsmMfucy7N2lQ2LUxqbzVaJwbkkELXcAlbT9CZYP6V2BUxxGz3sTpQ1M">
-  <input class="btn btn-danger" type="submit" value="{% translate 'Yes, delete' %}">
-</form>
+ <form method="post">
+
+    {% csrf_token %}
+
+    <p>{% translate "Are you sure, you want to delete" %} {{ user.first_name }} {{ user.last_name }}?</p>
+    <input class="btn btn-danger" type="submit" value="{% translate "Yes, delete" %}">
+
+  </form>
 
 
 {% endblock %}

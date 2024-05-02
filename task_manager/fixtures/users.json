@@ -1,6 +1,42 @@
 [
     {
         "model": "article.users",
+        "pk": 2,
+        "fields": {
+            "password": "pbkdf2_sha256$720000$2NuBdLz3FuuzAzTLTMiz3G$wUd/r3xTOVboxwnSVKk4Y64DwiaIT1GW0aeWfS+s/PA=",
+            "last_login": "2024-04-25T11:32:01.551Z",
+            "is_superuser": false,
+            "username": "emi",
+            "first_name": "emi",
+            "last_name": "emi",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-04-16T09:37:07.079Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "article.users",
+        "pk": 3,
+        "fields": {
+            "password": "pbkdf2_sha256$720000$IsXDtJ2RzHrlaJqqaw7tqi$JMp/k3bk87gLiGbb37WkmL9thFfQIH/COjAZTKxoXM8=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "emi2",
+            "first_name": "emi",
+            "last_name": "emi",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-04-16T09:38:34.256Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "article.users",
         "pk": 4,
         "fields": {
             "password": "pbkdf2_sha256$720000$kZUb5xxljCbcYD7HzAkutp$q75YYBNN9O8MpUwRzt/iIb8d/DO440RQiifDNBlhXKs=",
@@ -19,8 +55,7 @@
     },
     {
         "model": "article.users",
-        "pk": 5,
-        "fields": {
+        "pk": 5, "fields": {
             "password": "pbkdf2_sha256$720000$cQZSu3RzGzVvt3HpJryO1g$9/Q2ziaYWo5p6LZhtxNjb4dg2wjF3muwuGcaLeormLw=",
             "last_login": null,
             "is_superuser": false,
@@ -30,27 +65,27 @@
             "email": "",
             "is_staff": false,
             "is_active": true,
-            "date_joined": "2024-04-16T09:40:04.540Z",
+            "date_joined": "2024-04-16T09:39:35.675Z",
             "groups": [],
             "user_permissions": []
         }
     },
     {
         "model": "article.users",
-        "pk": 2,
+        "pk": 6,
         "fields": {
-            "password": "pbkdf2_sha256$720000$2NuBdLz3FuuzAzTLTMiz3G$wUd/r3xTOVboxwnSVKk4Y64DwiaIT1GW0aeWfS+s/PA=",
-            "last_login": null,
+            "password": "pbkdf2_sha256$720000$LsbE3oQbf1wpDsdDIeKjQM$2HINS3tgRUliJ+u/Z6FzZqUXH8MSFgzXGtCitACCYx4=",
+            "last_login": "2024-04-28T18:20:41.431Z",
             "is_superuser": false,
-            "username": "emi",
-            "first_name": "emi",
-            "last_name": "emi",
+            "username": "mia",
+            "first_name": "mia",
+            "last_name": "mia",
             "email": "",
             "is_staff": false,
             "is_active": true,
-            "date_joined": "2024-04-16T09:37:07.079Z",
+            "date_joined": "2024-04-25T14:45:45.812Z",
             "groups": [],
             "user_permissions": []
         }
     }
-    ]
+]

@@ -41,6 +41,15 @@ Only letters, numbers and symbols @/./+/-/_.
         )
 
 
+class UpdateUserForm(UserForm):
+
+    def clean_username(self):
+        username = self.cleaned_data['username']
+        if Users.objects.filter(username=username).exists():
+            username = self.cleaned_data['username']
+        return username
+
+
 class UserLoginForm(AuthenticationForm):
     username = forms.CharField(label=_('Username'), widget=forms.TextInput)
     password = forms.CharField(label=_('Password'), widget=forms.PasswordInput)

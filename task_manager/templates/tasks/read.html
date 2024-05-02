@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% load django_bootstrap5 %}
+{% load i18n %}
+
+{% block nav %}
+
+{% include "nav.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+  <h1>{{ task.name }}</h1>
+    <p>{{ task.description }}</p>
+    <p>{% translate "Author" %} {{ task.author }}</p>
+    <p>{% translate "Performer" %} {{ task.performer }}</p>
+    <p>{% translate "Status" %} {{ task.status }}</p>
+    <p>{% translate "Created at" %} {{ task.timestamp }}</p>
+    <p>{% translate "Labels" %} 
+      {% if task.label.all %}
+        <ul>
+        {% for label in task.label.all %}
+          <li>{{ label }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+</p>
+
+	<td>
+	  <a href="{% url 'task_update' task.id %}">{% translate "Update" %}</a>
+	  <br>
+	  <a href="{% url 'task_delete' task.id %}">{% translate "Delete" %}</a>
+	</td>
+      </tr>
+    </tbody>
+    {% endfor %}
+  </table>
+
+{% endblock %}
