@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 from dotenv import load_dotenv
 
 
@@ -26,11 +27,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = '#a-%u(0yr@^n_4_8jih^_ez*x=t99ropgu^q7mvy&vt!!qj4v$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', False)
 
+DATABASE_URL = os.getenv('DATABASE_URL')
+ROLLBAR_TOKEN = os.getenv('ROLLBAR_TOKEN')
 ALLOWED_HOSTS = ['webserver', '127.0.0.1', 'localhost']
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
@@ -117,6 +120,11 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
 LANGUAGE_CODE = 'ru'
+
+LANGUAGES = (
+    ('en-US', 'English'),
+    ('ru-RU', 'Russian'),
+)
 
 LOCALE_PATHS = ['/locale', ]
 
