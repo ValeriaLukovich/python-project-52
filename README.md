@@ -1,9 +1,9 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/ValeriaLukovich/python-project-52/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/ValeriaLukovich/python-project-52/actions)
 
-<a href="https://codeclimate.com/github/ValeriaLukovich/python-project-52/maintainability"><img src="https://api.codeclimate.com/v1/badges/e6b7930e584e69108b42/maintainability" /></a>
+<a href="https://codeclimate.com/github/ValeriaLukovich/python-project-52/maintainability"><img src="https://api.codeclimate.com/v1/badges/9bbbd244e5a657fe2a67/maintainability" /></a>
 
-<a href="https://codeclimate.com/github/ValeriaLukovich/python-project-52/test_coverage"><img src="https://api.codeclimate.com/v1/badges/e6b7930e584e69108b42/test_coverage" /></a>
+<a href="https://codeclimate.com/github/ValeriaLukovich/python-project-52/test_coverage"><img src="https://api.codeclimate.com/v1/badges/9bbbd244e5a657fe2a67/test_coverage" /></a>
 
 https://python-project-52-1.onrender.com
 
