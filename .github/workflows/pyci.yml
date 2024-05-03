@@ -26,7 +26,7 @@ jobs:
           make lint
       - name: Run tests
         env:
-          SECRET_KEY: ${{ l0ib*0p^7^d%i*cqfz)2@hnqp4k#0yl*)m9jo(tit8ujv7l)7a }}
+          SECRET_KEY: l0ib*0p^7^d%i*cqfz)2@hnqp4k#0yl*)m9jo(tit8ujv7l)7a
         run: |
           make test
       - name: Test & publish code coverage
