@@ -33,6 +33,9 @@ jobs:
         run: |
           make static
       - name: Run tests
+        env:
+          SECRET_KEY: secret
+          DEBUG: True
         run: |
           make test
       - name: Test & publish code coverage
