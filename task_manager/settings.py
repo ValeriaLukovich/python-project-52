@@ -30,9 +30,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'l0ib*0p^7^d%i*cqfz)2@hnqp4k#0yl*)m9jo(tit8ujv7l)7a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG', False) == 'True'
-
-DATABASE_URL = os.getenv('DATABASE_URL')
+DEBUG = os.getenv('DEBUG', 'False') == 'True'
 ROLLBAR_TOKEN = os.getenv('ROLLBAR_TOKEN')
 ALLOWED_HOSTS = ['webserver', '127.0.0.1', 'localhost']
 
@@ -103,6 +101,7 @@ DATABASES = {
 }
 
 DATABASE_URL = os.getenv('DATABASE_URL')
+
 if DATABASE_URL:
     DATABASES['default'] = dj_database_url.config(
         default=DATABASE_URL, conn_max_age=600, conn_health_checks=True,
