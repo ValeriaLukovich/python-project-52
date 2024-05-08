@@ -40,7 +40,7 @@ class LabelsTest(TestCase):
         self.assertEqual(label1.name, update_label["name"])
 
     def test_label_delete(self):
-        label2 = Label.objects.get(pk="3")
+        label2 = Label.objects.get(pk="2")
         url = reverse("label_delete", args=[label2.pk])
         response = self.client.post(url)
         self.assertEqual(response.status_code, 302)
