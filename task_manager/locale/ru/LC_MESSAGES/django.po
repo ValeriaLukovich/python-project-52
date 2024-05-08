@@ -240,7 +240,7 @@ msgstr "Вход"
 
 #: task_manager/templates/login.html:17
 msgid "LogIn"
-msgstr "Войти"
+msgstr "Вход"
 
 #: task_manager/templates/nav.html:5 task_manager/templates/nav_panel.html:5
 msgid "Task manager"
