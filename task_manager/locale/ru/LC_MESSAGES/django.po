@@ -117,10 +117,6 @@ msgstr "Только свои задачи"
 msgid "Description"
 msgstr "Описание"
 
-#: task_manager/tasks/models.py:13 task_manager/templates/tasks/read.html:18
-msgid "Status"
-msgstr "Статусы"
-
 #: task_manager/tasks/models.py:18 task_manager/templates/tasks/read.html:16
 #: task_manager/templates/tasks/tasks.html:34
 msgid "Author"
@@ -254,6 +250,7 @@ msgstr "Регистрация"
 
 #: task_manager/templates/nav_panel.html:22
 #: task_manager/templates/statuses/statuses.html:16
+#: task_manager/tasks/models.py:13 task_manager/templates/tasks/read.html:18
 msgid "Statuses"
 msgstr "Статусы"
 
