@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-09 07:48+0000\n"
+"POT-Creation-Date: 2024-05-09 07:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,32 +28,30 @@ msgstr "Имя"
 msgid "Last name"
 msgstr "Фамилия"
 
-#: task_manager/article/forms.py:14 task_manager/article/forms.py:49
+#: task_manager/article/forms.py:14 task_manager/article/forms.py:52
 msgid "Username"
 msgstr "Имя пользователя"
 
-#: task_manager/article/forms.py:16
+#: task_manager/article/forms.py:17
 #, fuzzy
-msgid ""
-"Obligatory field. No more than 150 characters. Only letters, numbers and "
-"symbols @/./+/-/_."
+msgid "Obligatory field. Only letters, numbers and symbols @/./+/-/_."
 msgstr ""
 "Обязательное поле. Не более 150 символов. Только буквы, цифры и символы @/./"
 "+/-/_."
 
-#: task_manager/article/forms.py:18 task_manager/article/forms.py:50
+#: task_manager/article/forms.py:21 task_manager/article/forms.py:53
 msgid "Password"
 msgstr "Пароль"
 
-#: task_manager/article/forms.py:20
+#: task_manager/article/forms.py:23
 msgid "Your password must contain at least 3 characters."
 msgstr "Ваш пароль должен содержать как минимум 3 символа."
 
-#: task_manager/article/forms.py:23
+#: task_manager/article/forms.py:26
 msgid "Password confirmation"
 msgstr "Подтверждение пароля"
 
-#: task_manager/article/forms.py:25
+#: task_manager/article/forms.py:28
 msgid "To confirm, please enter your password again."
 msgstr "Для подтверждения введите, пожалуйста, пароль ещё раз."
 
