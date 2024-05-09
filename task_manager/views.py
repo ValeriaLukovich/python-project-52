@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.urls import reverse_lazy
+from django.contrib import messages
 from django.views.generic.base import TemplateView
 from task_manager.article.forms import UserLoginForm
 from django.utils.translation import gettext_lazy as _
@@ -21,6 +21,9 @@ class UserLoginView(SuccessMessageMixin, LoginView):
     success_message = _("You are logged in")
 
 
-class UserLogoutView(SuccessMessageMixin, LogoutView):
+class UserLogoutView(LogoutView):
 
-    next_page = reverse_lazy('start_page')
+    def dispatch(self, request, *args, **kwargs):
+        if request.user.is_authenticated:
+            messages.info(request, _("You are logged out"))
+        return super().dispatch(request, *args, **kwargs)
