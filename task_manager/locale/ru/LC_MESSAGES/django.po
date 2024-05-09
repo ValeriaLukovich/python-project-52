@@ -114,8 +114,6 @@ msgid "Only self tasks"
 msgstr "Только свои задачи"
 
 #: task_manager/tasks/models.py:10
-#, fuzzy
-#| msgid "Registration"
 msgid "Description"
 msgstr "Описание"
 
