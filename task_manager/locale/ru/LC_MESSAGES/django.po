@@ -30,7 +30,8 @@ msgstr "Фамилия"
 
 #: task_manager/article/forms.py:14 task_manager/article/forms.py:54
 #, fuzzy
-msgid "Users"
+#| msgid "Users"
+msgid "Username"
 msgstr "Пользователи"
 
 #: task_manager/article/forms.py:14 task_manager/article/forms.py:54
