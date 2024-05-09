@@ -125,8 +125,6 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'ru-Ru'
 
-
-
 LOCALE_PATHS = (os.path.join(BASE_DIR, 'locale'), )
 
 TIME_ZONE = 'UTC'
