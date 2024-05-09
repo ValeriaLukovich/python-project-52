@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-08 09:47+0000\n"
+"POT-Creation-Date: 2024-05-09 07:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,43 +28,32 @@ msgstr "Имя"
 msgid "Last name"
 msgstr "Фамилия"
 
-#: task_manager/article/forms.py:14 task_manager/article/forms.py:54
-#, fuzzy
-#| msgid "Users"
-msgid "Username"
-msgstr "Пользователи"
-
-#: task_manager/article/forms.py:14 task_manager/article/forms.py:54
+#: task_manager/article/forms.py:14 task_manager/article/forms.py:49
 msgid "Username"
 msgstr "Имя пользователя"
 
-
 #: task_manager/article/forms.py:16
 #, fuzzy
-#| msgid ""
-#| "Obligatory field. No more than 150 characters. Only letters, numbers and "
-#| "symbols @/./+/-/_."
 msgid ""
-"\n"
-"            Obligatory field. No more than 150 characters.\n"
-"Only letters, numbers and symbols @/./+/-/_.\n"
+"Obligatory field. No more than 150 characters. Only letters, numbers and "
+"symbols @/./+/-/_."
 msgstr ""
 "Обязательное поле. Не более 150 символов. Только буквы, цифры и символы @/./"
 "+/-/_."
 
-#: task_manager/article/forms.py:23 task_manager/article/forms.py:55
+#: task_manager/article/forms.py:18 task_manager/article/forms.py:50
 msgid "Password"
 msgstr "Пароль"
 
-#: task_manager/article/forms.py:25
+#: task_manager/article/forms.py:20
 msgid "Your password must contain at least 3 characters."
 msgstr "Ваш пароль должен содержать как минимум 3 символа."
 
-#: task_manager/article/forms.py:28
+#: task_manager/article/forms.py:23
 msgid "Password confirmation"
 msgstr "Подтверждение пароля"
 
-#: task_manager/article/forms.py:30
+#: task_manager/article/forms.py:25
 msgid "To confirm, please enter your password again."
 msgstr "Для подтверждения введите, пожалуйста, пароль ещё раз."
 
@@ -239,8 +228,8 @@ msgstr "Удалить"
 msgid "Edit tag"
 msgstr "Изменение метки"
 
-#: task_manager/templates/login.html:10
-msgid "Entrance"
+#: task_manager/templates/login.html:10 task_manager/templates/nav.html:22
+msgid "Log In"
 msgstr "Вход"
 
 #: task_manager/templates/login.html:17
@@ -255,10 +244,6 @@ msgstr "Менеджер задач"
 #: task_manager/templates/users/users.html:15
 msgid "Users"
 msgstr "Пользователи"
-
-#: task_manager/templates/nav.html:22
-msgid "Log In"
-msgstr "Вход"
 
 #: task_manager/templates/nav.html:26
 msgid "Sign Up"
@@ -333,9 +318,12 @@ msgstr "Имя пользователя"
 msgid "Full name"
 msgstr "Фамилия"
 
-#: task_manager/views.py:21
+#: task_manager/views.py:23
 msgid "You are logged in"
 msgstr "Вы залогинены"
+
+#~ msgid "Entrance"
+#~ msgstr "Вход"
 
 #~ msgid "Enter"
 #~ msgstr "Вход"
