@@ -278,6 +278,7 @@ msgstr "Изменение статуса"
 
 #: task_manager/templates/statuses/update.html:24
 #: task_manager/templates/users/update.html:28
+#: task_manager/templates/labels/update.html:24
 msgid "Change"
 msgstr "Измененить"
 
