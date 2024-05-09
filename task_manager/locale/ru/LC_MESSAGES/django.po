@@ -318,6 +318,7 @@ msgid "You are logged in"
 msgstr "Вы залогинены"
 
 #: task_manager/templates/users/update.html:28
+#: task_manager/templates/statuses/update.html:23
 msgid "Change"
 msgstr "Измененить"
 
