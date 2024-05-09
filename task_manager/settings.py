@@ -125,10 +125,10 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'ru-Ru'
 
-LANGUAGES = (
-    ('en-US', 'English'),
-    ('ru-RU', 'Russian'),
-)
+#LANGUAGES = (
+#    ('en-US', 'English'),
+#    ('ru-RU', 'Russian'),
+#)
 
 LOCALE_PATHS = (os.path.join(BASE_DIR, 'locale'), )
 
