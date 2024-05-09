@@ -5,36 +5,67 @@
 
 {% block nav %}
 
-{% include "nav.html" %}
+{% include "nav_panel.html" %}
 
 {% endblock %}
 
 {% block content %}
 
-  <h1>{{ task.name }}</h1>
-    <p>{{ task.description }}</p>
-    <p>{% translate "Author" %} {{ task.author }}</p>
-    <p>{% translate "Performer" %} {{ task.performer }}</p>
-    <p>{% translate "Statuses" %} {{ task.status }}</p>
-    <p>{% translate "Created at" %} {{ task.timestamp }}</p>
-    <p>{% translate "Labels" %} 
-      {% if task.label.all %}
-        <ul>
-        {% for label in task.label.all %}
-          <li>{{ label }}</li>
-        {% endfor %}
-        </ul>
-      {% endif %}
-</p>
+ <h1 class="my-4">
+        
+     {% translate "View task" %}
 
-	<td>
-	  <a href="{% url 'task_update' task.id %}">{% translate "Update" %}</a>
-	  <br>
-	  <a href="{% url 'task_delete' task.id %}">{% translate "Delete" %}</a>
-	</td>
-      </tr>
-    </tbody>
-    {% endfor %}
-  </table>
+</h1>
+
+  <div class="card">
+    <div class="card-header bg-secondary text-white">
+      <h2>{{ task.name }}</h2>
+    </div>
+    <div class="card-body bg-light">
+      <p>{{ task.description }}</p>
+      <hr>
+      <div class="container">
+	<div class="row p-1">
+	  <div class="col">{% translate "Author" %}</div>
+	  <div class="col">{{ task.author }}</div>
+	</div>
+
+	<div class="row p-1">
+	  <div class="col">{% translate "Performer" %}</div>
+	  <div class="col">{{ task.performer }}</div>
+	</div>
+
+	<div class="row p-1">
+	  <div class="col">{% translate "Status" %}</div>
+	  <div class="col">{{ task.status }}</div>
+	</div>
+
+	<div class="row p-1">
+	  <div class="col">{% translate "Created at" %}</div>
+	  <div class="col">{{ task.created_at }}</div>
+	</div>
+
+	<div class="row p-1">
+	  <div class="col">
+	    <h6>{% translate "Labels" %}:</h6>
+	    <ul>
+	      {% for label in task.labels.all %}
+                <li>{{ label }}</li>
+	      {% endfor %}
+	    </ul>
+	  </div>
+	</div>
+
+	<div class="row p-1">
+          <div class="col">
+	    <a href="{% url 'task_update' task.id %}">{% translate "Change" %}</a>
+	    <br>
+	    <a href="{% url 'task_delete' task.id %}">{% translate "Delete" %}</a>
+	  </div>
+	</div>
+
+      </div>
+    </div>
+  </div>
 
 {% endblock %}
