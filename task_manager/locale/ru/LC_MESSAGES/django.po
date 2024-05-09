@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-09 13:09+0200\n"
+"POT-Creation-Date: 2024-05-09 11:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -100,6 +100,10 @@ msgstr "Статус успешно создан"
 #: task_manager/statuses/views.py:35
 msgid "Status changed successfully"
 msgstr "Статус успешно изменен"
+
+#: task_manager/statuses/views.py:42
+msgid "Status successfully deleted"
+msgstr "Статус успешно удален"
 
 #: task_manager/tasks/filters.py:16
 msgid "Only self tasks"
@@ -272,6 +276,11 @@ msgstr "Удаление статуса"
 msgid "Edit status"
 msgstr "Изменение статуса"
 
+#: task_manager/templates/statuses/update.html:24
+#: task_manager/templates/users/update.html:28
+msgid "Change"
+msgstr "Измененить"
+
 #: task_manager/templates/tasks/create.html:31
 #: task_manager/templates/tasks/tasks.html:18
 msgid "Create task"
@@ -316,11 +325,6 @@ msgstr "Фамилия"
 #: task_manager/views.py:21
 msgid "You are logged in"
 msgstr "Вы залогинены"
-
-#: task_manager/templates/users/update.html:28
-#: task_manager/templates/statuses/update.html:23
-msgid "Change"
-msgstr "Измененить"
 
 #: task_manager/views.py:28
 msgid "You are logged out"
