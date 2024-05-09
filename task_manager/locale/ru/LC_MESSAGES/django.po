@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-09 08:09+0000\n"
+"POT-Creation-Date: 2024-05-09 10:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -231,7 +231,7 @@ msgstr "Вход"
 
 #: task_manager/templates/login.html:17
 msgid "LogIn"
-msgstr "Вход"
+msgstr "Войти"
 
 #: task_manager/templates/nav.html:5 task_manager/templates/nav_panel.html:5
 msgid "Task manager"
@@ -313,7 +313,7 @@ msgstr "Имя пользователя"
 msgid "Full name"
 msgstr "Фамилия"
 
-#: task_manager/views.py:23
+#: task_manager/views.py:21
 msgid "You are logged in"
 msgstr "Вы залогинены"
 
