@@ -25,6 +25,10 @@ class TaskFormCreateView(SuccessMessageMixin, CreateView):
     success_url = reverse_lazy('tasks')
     success_message = _('Task successfully created')
 
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+
 
 class TaskFormUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
 
