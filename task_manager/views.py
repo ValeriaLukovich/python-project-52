@@ -1,7 +1,5 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.utils.translation import activate
-from django.http import HttpResponseRedirect
 from django.views.generic.base import TemplateView
 from task_manager.article.forms import UserLoginForm
 from django.utils.translation import gettext_lazy as _
@@ -26,10 +24,3 @@ class UserLoginView(SuccessMessageMixin, LoginView):
 class UserLogoutView(SuccessMessageMixin, LogoutView):
 
     next_page = reverse_lazy('start_page')
-
-
-def set_language(request, language):
-    activate(language)
-    response = HttpResponseRedirect(request.META.get('HTTP_REFERER'))
-    response.set_cookie('django_language', language)
-    return response

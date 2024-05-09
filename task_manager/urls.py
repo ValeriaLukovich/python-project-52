@@ -20,11 +20,10 @@ from task_manager.views import (
     HomePageView,
     UserLoginView,
     UserLogoutView,
-    set_language
 )
 
 urlpatterns = [
-    path('set_language/<str:language>/', set_language, name='set_language'),
+    path('i18n/', include('django.conf.urls.i18n')),
     path('', HomePageView.as_view(), name='start_page'),
     path('users/', include('task_manager.article.urls'), name='users_list'),
     path('statuses/', include('task_manager.statuses.urls'), name='statuses_list'),
