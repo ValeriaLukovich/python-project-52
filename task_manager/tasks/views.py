@@ -40,6 +40,10 @@ class TaskFormUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     success_url = reverse_lazy('tasks')
     success_message = _('Task changed successfully')
 
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+
 
 class TaskFormDeleteView(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
     model = Task
