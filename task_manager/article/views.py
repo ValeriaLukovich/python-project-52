@@ -21,6 +21,7 @@ class IndexView(View):
 
 class UserFormCreateView(SuccessMessageMixin, CreateView):
 
+    model = Users
     form_class = UserForm
     template_name = 'users/create.html'
     success_url = reverse_lazy('login')
