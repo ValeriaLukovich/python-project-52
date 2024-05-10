@@ -20,7 +20,7 @@ class Task(models.Model):
         related_name="author",
         null=True
     )
-    performer = models.ForeignKey(
+    executor = models.ForeignKey(
         Users,
         verbose_name=_("Performer"),
         null=True,
