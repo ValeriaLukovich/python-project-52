@@ -8,7 +8,7 @@ from django.utils.translation import gettext_lazy as _
 class TaskFilter(django_filters.FilterSet):
 
     labels = django_filters.ModelChoiceFilter(
-        label='labels',
+        label=_('Label'),
         null_label='Uncategorized',
         queryset=Label.objects.all(),
     )
