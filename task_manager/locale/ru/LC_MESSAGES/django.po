@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-10 08:53+0200\n"
+"POT-Creation-Date: 2024-05-10 12:34+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -139,17 +139,21 @@ msgstr "Исполнитель"
 msgid "Labels"
 msgstr "Метки"
 
-#: tasks/views.py:26
+#: tasks/views.py:28
 msgid "Task successfully created"
 msgstr "Задача успешно создана"
 
-#: tasks/views.py:39
+#: tasks/views.py:41
 msgid "Task changed successfully"
 msgstr "Задача успешно изменена"
 
-#: tasks/views.py:46
+#: tasks/views.py:48
 msgid "Task deleted successfully"
 msgstr "Задача успешно удалена"
+
+#: tasks/views.py:52
+msgid "Only the author of a task can delete it"
+msgstr "Задачу может удалить только ее автор"
 
 #: templates/footer.html:6
 msgid "Hexlet"
@@ -222,7 +226,7 @@ msgid "Edit tag"
 msgstr "Изменение метки"
 
 #: templates/labels/update.html:24 templates/statuses/update.html:24
-#: templates/tasks/read.html:61 templates/tasks/update.html:24
+#: templates/tasks/read.html:61 templates/tasks/update.html:25
 #: templates/users/update.html:28
 msgid "Change"
 msgstr "Измененить"
@@ -288,7 +292,7 @@ msgstr "Просмотр задачи"
 msgid "Show"
 msgstr "Показать"
 
-#: templates/tasks/update.html:16
+#: templates/tasks/update.html:17
 msgid "Edit task"
 msgstr "Изменение задачи"
 

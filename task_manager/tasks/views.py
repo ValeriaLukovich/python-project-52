@@ -1,7 +1,9 @@
 from .models import Task
 from .forms import TaskForm
 from .filters import TaskFilter
+from django.contrib import messages
 from django.urls import reverse_lazy
+from django.shortcuts import redirect
 from django_filters.views import FilterView
 from django.views.generic.detail import DetailView
 from django.utils.translation import gettext_lazy as _
@@ -45,8 +47,11 @@ class TaskFormDeleteView(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
     success_url = reverse_lazy('tasks')
     success_message = _('Task deleted successfully')
 
-    def delete(self, request, *args, **kwargs):
-        return super().delete(request, *args, **kwargs)
+    def get(self, request, *args, **kwargs):
+        if self.get_object().author != self.request.user:
+            messages.error(request, _('Only the author of a task can delete it'))
+            return redirect(reverse_lazy('tasks'))
+        return super().get(request, *args, **kwargs)
 
 
 class TaskReadView(DetailView):
