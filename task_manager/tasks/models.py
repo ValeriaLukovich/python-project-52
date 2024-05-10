@@ -26,7 +26,7 @@ class Task(models.Model):
         null=True,
         blank=True,
         on_delete=models.PROTECT,
-        related_name="performer"
+        related_name="executor"
     )
     created_at = models.DateTimeField(auto_now_add=True)
     labels = models.ManyToManyField(

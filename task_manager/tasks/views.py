@@ -28,9 +28,7 @@ class TaskFormCreateView(SuccessMessageMixin, CreateView):
     success_message = _('Task successfully created')
 
     def form_valid(self, form):
-        self.object = form.save(commit=False)
-        self.object.author = self.request.user
-        self.object.save()
+        form.instance.author = self.request.user
         return super().form_valid(form)
 
 
