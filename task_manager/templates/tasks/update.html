@@ -1,14 +1,15 @@
 
 {% extends "base.html" %}
 
-{% block content %}
-
 {% load django_bootstrap5 %}
-
 {% load i18n %}
 
+{% block nav %}
+{% include "nav_panel.html" %}
+{% endblock %}
 
-<div class="container wrapper flex-grow-1">
+{% block content %}
+
       
 
       <h1 class="my-4">
