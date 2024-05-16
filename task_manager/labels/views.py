@@ -60,4 +60,3 @@ class LabelFormDeleteView(LoginRequiredMixin,
         except ProtectedError:
             messages.warning(request, _("Cannot delete label because it is in use"))
             return redirect(reverse_lazy('labels'))
-
