@@ -25,7 +25,7 @@ from task_manager.views import (
 urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n')),
     path('', HomePageView.as_view(), name='start_page'),
-    path('users/', include('task_manager.article.urls'), name='users_list'),
+    path('users/', include('task_manager.users.urls'), name='users_list'),
     path('statuses/', include('task_manager.statuses.urls'), name='statuses_list'),
     path('tasks/', include('task_manager.tasks.urls'), name='tasks_list'),
     path('labels/', include('task_manager.labels.urls'), name='labels_list'),

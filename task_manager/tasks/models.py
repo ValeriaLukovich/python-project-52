@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext as _
-from task_manager.article.models import Users
+from task_manager.users.models import Users
 from task_manager.statuses.models import Status
 from task_manager.labels.models import Label
 

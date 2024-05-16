@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'task_manager',
-    'task_manager.article',
+    'task_manager.users',
     'task_manager.statuses',
     'task_manager.tasks',
     'task_manager.labels',
@@ -159,7 +159,7 @@ LOGIN_REDIRECT_URL = 'start_page'
 LOGOUT_REDIRECT_URL = 'start_page'
 
 
-AUTH_USER_MODEL = 'article.Users'
+AUTH_USER_MODEL = 'users.Users'
 
 CSRF_TRUSTED_ORIGINS = ['https://localhost:8000']
 
