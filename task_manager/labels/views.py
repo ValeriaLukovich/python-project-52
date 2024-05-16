@@ -21,7 +21,7 @@ class IndexView(ListView):
 class LabelFormCreateView(SuccessMessageMixin, CreateView):
 
     form_class = LabelForm
-    template_name = 'labels/create.html'
+    template_name = 'create.html'
     success_url = reverse_lazy('labels')
     success_message = _('Tag successfully created')
     extra_context = {'title': _('Create tag'),
