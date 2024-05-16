@@ -130,7 +130,7 @@ LANGUAGES = (
     ('ru-RU', 'Russian'),
 )
 
-LOCALE_PATHS = (os.path.join(BASE_DIR, 'locale'), )
+LOCALE_PATHS = [os.path.join(BASE_DIR, 'task_manager/locale'), ]
 
 TIME_ZONE = 'UTC'
 

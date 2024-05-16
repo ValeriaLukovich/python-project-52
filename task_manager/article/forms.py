@@ -1,32 +1,8 @@
-from django import forms
-from django.contrib.auth.forms import (
-    AuthenticationForm,
-    UserCreationForm,
-)
-from django.utils.translation import gettext_lazy as _
+from django.contrib.auth.forms import (UserCreationForm)
 from .models import Users
 
 
 class UserForm(UserCreationForm):
-    first_name = forms.CharField(label=_('First name'), widget=forms.TextInput)
-    last_name = forms.CharField(label=_('Last name'), widget=forms.TextInput)
-    username = forms.CharField(
-        label=_('Username'),
-        widget=forms.TextInput,
-        help_text=_(
-            "Obligatory field. Only letters, numbers and symbols @/./+/-/_."
-        )
-    )
-    password1 = forms.CharField(
-        label=_('Password'),
-        widget=forms.PasswordInput,
-        help_text=_("Your password must contain at least 3 characters.")
-    )
-    password2 = forms.CharField(
-        label=_('Password confirmation'),
-        widget=forms.PasswordInput,
-        help_text=_("To confirm, please enter your password again.")
-    )
 
     class Meta:
         model = Users
@@ -46,12 +22,3 @@ class UpdateUserForm(UserForm):
         if Users.objects.filter(username=username).exists():
             username = self.cleaned_data['username']
         return username
-
-
-class UserLoginForm(AuthenticationForm):
-    username = forms.CharField(label=_('Username'), widget=forms.TextInput)
-    password = forms.CharField(label=_('Password'), widget=forms.PasswordInput)
-
-    class Meta:
-        model = Users
-        fields = ['username', 'password']

@@ -1,3 +1,7 @@
+db.sqlite3
+coverage.xml
+static/admin
+/db.sqlite3
 dist/
 .DS_Store
 .venv/ 

@@ -23,9 +23,12 @@ class IndexView(FilterView):
 class TaskFormCreateView(SuccessMessageMixin, CreateView):
 
     form_class = TaskForm
-    template_name = 'tasks/create.html'
+    template_name = 'create.html'
     success_url = reverse_lazy('tasks')
     success_message = _('Task successfully created')
+    extra_context = {'title': _('Create task'),
+                     'target': 'task_create',
+                     'action': _('Create')}
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -47,9 +50,15 @@ class TaskFormUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
 
 class TaskFormDeleteView(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
     model = Task
-    template_name = 'tasks/delete.html'
+    template_name = 'delete.html'
     success_url = reverse_lazy('tasks')
     success_message = _('Task deleted successfully')
+    extra_context = {'action': _('Delete task')}
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['object'] = self.get_object().name
+        return context
 
     def get(self, request, *args, **kwargs):
         if self.get_object().author != self.request.user:
