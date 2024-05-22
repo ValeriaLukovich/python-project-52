@@ -35,9 +35,10 @@ class LabelFormUpdateView(LoginRequiredMixin,
 
     model = Label
     form_class = LabelForm
-    template_name = 'labels/update.html'
+    template_name = 'update.html'
     success_url = reverse_lazy('labels')
     success_message = _('Tag changed successfully')
+    extra_context = {'action': _('Edit tag')}
 
 
 class LabelFormDeleteView(LoginRequiredMixin,

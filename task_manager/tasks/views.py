@@ -39,9 +39,10 @@ class TaskFormUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
 
     model = Task
     form_class = TaskForm
-    template_name = 'tasks/update.html'
+    template_name = 'update.html'
     success_url = reverse_lazy('tasks')
     success_message = _('Task changed successfully')
+    extra_context = {'action': _('Edit task')}
 
     def form_valid(self, form):
         form.instance.author = self.request.user

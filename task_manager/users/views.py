@@ -34,10 +34,11 @@ class UserFormUpdateView(MyLoginRequiredMixin,
 
     model = Users
     form_class = UpdateUserForm
-    template_name = 'users/update.html'
+    template_name = 'update.html'
     success_url = reverse_lazy('users_list')
     success_message = _("The user has been successfully edited")
     permission_message = _("You do not have the rights to change another user.")
+    extra_context = {'action': _('Edit user')}
 
 
 class UserFormDeleteView(MyLoginRequiredMixin,
